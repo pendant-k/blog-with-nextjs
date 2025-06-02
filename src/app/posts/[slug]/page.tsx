@@ -9,11 +9,17 @@ import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 
-export default async function Post(props: Params) {
-    const params = await props.params;
-    const post = getPostBySlug(params.slug);
+type Params = {
+    params: Promise<{
+        slug: string;
+    }>;
+};
 
-    if (!post) {
+export default async function Post({ params }: Params) {
+    const { slug } = await params;
+    const post = getPostBySlug(slug);
+
+    if (!Post) {
         return notFound();
     }
 
@@ -21,9 +27,7 @@ export default async function Post(props: Params) {
 
     return (
         <main>
-            <Alert preview={post.preview} />
             <Container>
-                <Header />
                 <article className="mb-32">
                     <PostHeader
                         title={post.title}
@@ -37,12 +41,6 @@ export default async function Post(props: Params) {
     );
 }
 
-type Params = {
-    params: Promise<{
-        slug: string;
-    }>;
-};
-
 export async function generateMetadata(props: Params): Promise<Metadata> {
     const params = await props.params;
     const post = getPostBySlug(params.slug);
@@ -51,7 +49,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
         return notFound();
     }
 
-    const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+    const title = `${post.title} | pendant.k blog`;
 
     return {
         title,
