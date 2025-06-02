@@ -1,7 +1,7 @@
 ---
 title: "[TIL/Web] Tanstack Query Prefetching과 Mutation 기본기"
 excerpt: "Prefetching과 Mutation 사용법에 대해 간단하게 정리해보았다"
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/default-cover.jpg"
 date: "2025-06-02T05:35:07.322Z"
 author:
   name: pendant.k

@@ -1,7 +1,7 @@
 ---
 title: "[TIL/Web] React Query 기본기"
 excerpt: "리액트 쿼리 기초 및 useQuery 사용법에 대한 메모"
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/default-cover.jpg"
 date: "2025-06-02T05:35:07.322Z"
 author:
   name: pendant.k
