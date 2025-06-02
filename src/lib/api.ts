@@ -3,6 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
 
+// 마크다운 파일들 가져오기
 const postsDirectory = join(process.cwd(), "_posts");
 
 export function getPostSlugs() {
