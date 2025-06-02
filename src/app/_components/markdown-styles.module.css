@@ -16,3 +16,31 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+/* 코드 블록 스타일링 */
+.markdown pre {
+  @apply bg-slate-800 p-4 rounded-lg my-6 overflow-x-auto;
+}
+
+.markdown code {
+  @apply bg-slate-800 px-1 py-0.5 rounded text-sm;
+}
+
+/* 링크 스타일링 */
+.markdown a {
+  @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+/* 인용구 스타일링 */
+.markdown blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic;
+}
+
+/* 목록 스타일링 */
+.markdown ul {
+  @apply list-disc list-inside;
+}
+
+.markdown ol {
+  @apply list-decimal list-inside;
+}
